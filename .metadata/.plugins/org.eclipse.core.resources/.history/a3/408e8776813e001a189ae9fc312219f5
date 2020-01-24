@@ -1,0 +1,28 @@
+
+public class Tester {
+	
+	public static void main(String[] args) {
+		
+		BinaryTree tree = new BinaryTree();
+		
+		tree.root = tree.insert(5);
+		tree.root = tree.insert(6);
+		tree.root = tree.insert(2);
+		tree.root = tree.insert(3);
+		tree.root = tree.insert(8);
+		tree.root = tree.insert(1);
+		tree.root = tree.insert(9);
+		tree.root = tree.insert(4);
+		tree.root = tree.insert(7);
+		
+		tree.inOrderTraversal();
+		System.out.println();
+		tree.postOrderTraversal();
+		
+		Object inOrder[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+		Object postOrder[] = {1, 4, 3, 2, 7, 9, 8, 6, 5};
+		
+		BinaryTree newTree = tree.buildTree(inOrder, postOrder);
+	}
+
+}

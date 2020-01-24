@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/Users/jberger/Documents/School/Winter 2020/320/.metadata/.plugins/org.eclipse.jdt.core
+722486541.index
+939283709.index
+3319460108.index
+1083294067.index

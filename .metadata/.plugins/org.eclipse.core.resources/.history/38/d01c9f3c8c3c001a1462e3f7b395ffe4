@@ -1,0 +1,34 @@
+package Trie;
+
+import java.util.*;
+
+public class Trie {
+	//Prefix tree
+	
+	private class TrieNode {
+		Map<Character, TrieNode> children = new TreeMap<>();
+		boolean word = false;
+	}
+	
+	private TrieNode root;
+	
+	public Trie() {
+		this.root = new TrieNode();
+	}
+	
+	public void insertString(String s) {
+		insertString(root, s);
+	}
+	private void insertString(TrieNode root, String s) {
+		TrieNode cur = root;
+		for (char ch : s.toCharArray()) {
+			TrieNode next = cur.children.get(ch);
+			if (next == null) {
+				cur.children.put(ch, next = new TrieNode());
+				cur = next;
+			}
+			cur.word = true;
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+
+public class BinaryTree {
+	
+	private class Node {
+		
+		public Node left, right;
+		public int data;
+		
+		Node(int data) {
+			this.data = data;
+			left = right = null;
+		}
+	}
+	
+	Node root;
+	
+	public BinaryTree() {
+		root = null;
+	}
+	
+	public Node insert(int toInsert) {
+		return insert(root, toInsert);
+	}
+	
+	private Node insert(Node root, int toInsert) {
+		if (root == null) {
+			root = new Node(toInsert);
+		} else {
+			if (root.data < toInsert) {
+				root.left = insert(root.left, toInsert);
+			} else {
+				root.right = insert(root.right, toInsert);
+			}
+		}
+		
+		return root;
+	}
+
+}
