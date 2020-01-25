@@ -15,8 +15,9 @@ public class Tester {
 		tree.root = tree.insert(4);
 		tree.root = tree.insert(7);
 		
+		System.out.println("Printing in order:\n");
 		tree.inOrderTraversal();
-		System.out.println();
+		System.out.println("Printing post order:\n");
 		tree.postOrderTraversal();
 		System.out.println();
 		
@@ -24,6 +25,10 @@ public class Tester {
 		Object postOrder[] = {9, 1, 2, 12, 7, 5, 3, 11, 4, 8};
 		
 		BinaryTree newTree = BinaryTree.buildTree(inOrder, postOrder);
+		System.out.println("Printing new tree in order:\n");
+		newTree.inOrderTraversal();
+		System.out.println("Printing new tree post order:\n");
+		newTree.postOrderTraversal();
 	}
 
 }

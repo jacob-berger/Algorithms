@@ -10,9 +10,11 @@ public class BinaryTree {
 			this.data = data;
 			left = right = null;
 		}
+
 	}
 
 	Node root;
+	int index = 0;
 
 	public BinaryTree() {
 		root = null;
@@ -56,24 +58,16 @@ public class BinaryTree {
 
 	private void postOrderTraversal(Node root) {
 		if (root == null) return;
-		
+
 		postOrderTraversal(root.left);
-		
+
 		postOrderTraversal(root.right);
-		
+
 		System.out.println(root.data);
 	}
-	
+
 	public static BinaryTree buildTree(Object inOrderSequence[], Object postOrderSequence[]) {
-//		BinaryTree tree = new BinaryTree();
-//		int root = (int) postOrderSequence[postOrderSequence.length - 1];
-//		tree.insert(root);
-//		Object leftSubtreeInOrder[] = findLeftSubtreeInOrder(inOrderSequence, root);
-//		Object leftSubtreePostOrder[] = findRightSubtreePostOrder(postOrderSequence, root);
-//		Object rightSubtreeInOrder[] = findRightSubtreeInOrder(inOrderSequence, root);
-//		Node cur = tree.root;
-//		while (leftSubtreeInOrder.length != 0) {
-//		}
+
 		if (inOrderSequence == null || postOrderSequence == null) throw new NullPointerException("Input was null");
 		if (inOrderSequence.length == 0) return new BinaryTree();
 		if (inOrderSequence.length == 1) {
@@ -85,68 +79,90 @@ public class BinaryTree {
 			Object[] leftPostOrder = findLeftSubtreePostOrder(inOrderSequence, postOrderSequence, (int) postOrderSequence[postOrderSequence.length - 1]);
 			Object[] rightInOrder = findRightSubtreeInOrder(inOrderSequence, (int) postOrderSequence[postOrderSequence.length - 1]);
 			Object[] rightPostOrder = findRightSubtreePostOrder(inOrderSequence, postOrderSequence, (int) postOrderSequence[postOrderSequence.length - 1]);
-			
+
+			BinaryTree tree = new BinaryTree();
+			tree.buildTreeHelper(leftInOrder, leftPostOrder);
+			tree.buildTreeHelper(rightInOrder, rightPostOrder);
+			return tree;
 		}
-		
-		
-		return null;
+
 	}
-	
+
+	private Node buildTreeHelper(Object[] inOrder, Object[] postOrder) {
+		if (inOrder == null || postOrder == null) throw new NullPointerException("Input was null");
+		if (inOrder.length == 0 || postOrder.length == 0) return null;
+		if (inOrder.length == 1 || postOrder.length == 1) {
+			this.insert((int)postOrder[0]);
+			return null;
+		} else {
+			Object[] leftInOrder = findLeftSubtreeInOrder(inOrder, (int) postOrder[postOrder.length - 1]);
+			Object[] leftPostOrder = findLeftSubtreePostOrder(inOrder, postOrder, (int) postOrder[postOrder.length - 1]);
+			Object[] rightInOrder = findRightSubtreeInOrder(inOrder, (int) postOrder[postOrder.length - 1]);
+			Object[] rightPostOrder = findRightSubtreePostOrder(inOrder, postOrder, (int) postOrder[postOrder.length - 1]);
+
+			this.buildTreeHelper(leftInOrder, leftPostOrder);
+			this.buildTreeHelper(rightInOrder, rightPostOrder);
+		}
+		return this.root;
+	}
+
 	private static Object[] findLeftSubtreeInOrder(Object inOrderSequence[], int root) {
 		int ix = 0;
 		while ((int) inOrderSequence[ix] != root) {
 			ix++;
 		}
-		
+
 		Object leftSubtree[] = new Object[ix];
 		for (int iy = 0; iy < ix; iy++) {
 			leftSubtree[iy] = inOrderSequence[iy];
 		}
-		
+
 		return leftSubtree;
 	}
-	
+
 	private static Object[] findRightSubtreeInOrder(Object inOrderSequence[], int root) {
 		int ix = 0;
 		while ((int) inOrderSequence[ix] != root) {
 			ix++;
 		}
-		
+
 		Object rightSubtree[] = new Object[inOrderSequence.length - ix - 1];
 		for (int iy = ix + 1; iy < inOrderSequence.length; iy++) {
 			rightSubtree[iy - ix - 1] = inOrderSequence[iy];
 		}
-		
+
 		return rightSubtree;
 	}
-	
+
 	private static Object[] findLeftSubtreePostOrder(Object inOrderSequence[], Object postOrderSequence[], int root) {
 		int ix = 0;
 		while ((int) inOrderSequence[ix] != root) {
 			ix++;
 		}
-		
+
 		Object leftSubtree[] = new Object[ix];
 		for (int iy = 0; iy < ix; iy++) {
 			leftSubtree[iy] = postOrderSequence[iy];
 		}
-		
+
 		return leftSubtree;
 	}
-	
+
 	private static Object[] findRightSubtreePostOrder(Object inOrderSequence[], Object postOrderSequence[], int root) {
 		int ix = 0;
 		while ((int) inOrderSequence[ix] != root) {
 			ix++;
 		}
-		
+
 		Object rightSubtree[] = new Object[postOrderSequence.length - ix - 1];
 		for (int iy = ix; iy < postOrderSequence.length - 1; iy++) {
 			rightSubtree[iy - ix] = postOrderSequence[iy];
 		}
-		
+
 		return rightSubtree;
 	}
+
+
 	/*
 	 * Should probably be:
 	 * if array is a single element, insert into a new tree and return the tree
