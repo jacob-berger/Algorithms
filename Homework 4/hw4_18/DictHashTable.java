@@ -29,7 +29,7 @@ public class DictHashTable {
 				ix++;
 			}
 			fin.close();
-			System.out.println("Dictionary hashtable created.");
+//			System.out.println("Dictionary hashtable created.");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
