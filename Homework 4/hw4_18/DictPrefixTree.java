@@ -4,22 +4,29 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class DictPrefixTree {
-	
-	class TrieNode {
+public class DictPrefixTree
+{
+
+	private static class TrieNode
+	{
 		boolean word = false;
 		Map<Character, TrieNode> children = new TreeMap<>();
 	}
-	
-	private TrieNode root;
-	
-	public DictPrefixTree() {
-		this.root = new TrieNode();
+
+	private static TrieNode root;
+
+	public DictPrefixTree()
+	{
+		root = new TrieNode();
 		File fin = new File("dictionary.txt");
 		readWords(fin);
 	}
-	
-	public void readWords(File file) {
+
+	static DictPrefixTree tree = new DictPrefixTree();
+
+
+	public void readWords(File file)
+	{
 		try {
 			Scanner fin = new Scanner(file);
 			while (fin.hasNext()) {
@@ -27,16 +34,19 @@ public class DictPrefixTree {
 				insertString(string);
 			}
 			fin.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+		}
+		catch (FileNotFoundException e)
+		{
+
 			e.printStackTrace();
 		}
 	}
-	
-	public void insertString(String s) {
+
+	public void insertString(String s)
+	{
 		insertString(root, s);
 	}
-	
+
 	private void insertString(TrieNode root, String s) {
 		TrieNode cur = root;
 		for (char ch : s.toCharArray()) {
@@ -47,23 +57,33 @@ public class DictPrefixTree {
 		}
 		cur.word = true;
 	}
-	
-	public void printSorted() {
-		printSorted(root, "");
+
+
+	public static boolean isWords(String s)
+	{
+		return isWords(root, s);
 	}
-	
-	private void printSorted(TrieNode node, String s) {
-		if (node.word) {
-			System.out.println(s);
+
+	public static boolean isWords(TrieNode r, String s)
+	{
+		if(s != null && s.length() > 0)
+		{
+			String rest = s.substring(1);
+			char ch = s.charAt(0);
+			TrieNode child = r.children.get(ch);
+
+			if(s.length() == 1 && child != null){
+				if(child.word){
+					return true;
+				}
+			}
+			if(child == null)
+				return false;
+			else
+				return isWords(child, rest);
 		}
-		for (Character ch : node.children.keySet()) {
-			printSorted(node.children.get(ch), s + ch);
-		}
+		return false;
+
 	}
-	
-//	public static void main(String[] args) {
-//		DictPrefixTree tree = new DictPrefixTree();
-//		tree.printSorted();
-//	}
 
 }
