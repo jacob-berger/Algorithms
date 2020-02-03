@@ -1,0 +1,326 @@
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+354
+Testing against Hashtable...
+
+
+Testing against Prefix Tree...
+
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+333
+Testing against Hashtable...
+
+dee
+fed
+fee
+
+Testing against Prefix Tree...
+
+dee
+fed
+fee
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+2465
+Testing against Hashtable...
+
+
+Testing against Prefix Tree...
+
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+236
+Testing against Hashtable...
+
+afm
+ben
+ceo
+
+Testing against Prefix Tree...
+
+afm
+ben
+ceo
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+654
+Testing against Hashtable...
+
+okh
+
+Testing against Prefix Tree...
+
+okh
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+4354267837
+Testing against Hashtable...
+
+helicopter
+
+Testing against Prefix Tree...
+
+helicopter
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+5346
+Testing against Hashtable...
+
+lego
+
+Testing against Prefix Tree...
+
+lego
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+765
+Testing against Hashtable...
+
+sol
+
+Testing against Prefix Tree...
+
+sol
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+1
+Numbers entered must be 2-9 and cannot be letters or special characters
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+0
+Numbers entered must be 2-9 and cannot be letters or special characters
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+56478
+Testing against Hashtable...
+
+
+Testing against Prefix Tree...
+
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+9867645
+Testing against Hashtable...
+
+
+Testing against Prefix Tree...
+
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+5647
+Testing against Hashtable...
+
+logs
+
+Testing against Prefix Tree...
+
+logs
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+57
+Testing against Hashtable...
+
+jp
+jr
+js
+lp
+
+Testing against Prefix Tree...
+
+jp
+jr
+js
+lp
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+54637
+Testing against Hashtable...
+
+khmer
+kinds
+lines
+
+Testing against Prefix Tree...
+
+khmer
+kinds
+lines
+
+Enter in keypad numbers or type 'exit'
+(Example: 23456)
+KeyPad: 
+2 = (a b c)
+3 = (d e f)
+4 = (g h i)
+5 = (j k l)
+6 = (m n o)
+7 = (p q r s)
+8 = (t u v)
+9 = (w x y z)
+---> 
+exit
